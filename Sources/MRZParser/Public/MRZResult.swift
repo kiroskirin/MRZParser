@@ -76,14 +76,20 @@ public struct MRZResult: Hashable {
     public let surnames: String
     public let givenNames: String
     public let documentNumber: String?
+    public let documentNumberCheckDigit: String?
     public let nationalityCountryCode: String
     public let birthdate: Date?
+    public let birthdateCheckDigit: String?
     public let sex: Sex
     public let expiryDate: Date?
+    public let expiryDateCheckDigit: String?
     public let optionalData: String?
+    public let mrzString: String
+    public let mrzStringWithFinalDigit: String
     /// `nil` if not provided
     public let optionalData2: String?
-
+    public let finalCheckDigit: String?
+    
     public init(
         format: MRZFormat,
         documentType: DocumentType,
@@ -92,12 +98,18 @@ public struct MRZResult: Hashable {
         surnames: String,
         givenNames: String,
         documentNumber: String?,
+        documentNumberCheckDigit: String?,
         nationalityCountryCode: String,
         birthdate: Date?,
+        birthdateCheckDigit: String?,
         sex: Sex,
         expiryDate: Date?,
+        expiryDateCheckDigit: String?,
         optionalData: String?,
-        optionalData2: String?
+        mrzString: String,
+        mrzStringWithFinalDigit: String,
+        optionalData2: String?,
+        finalCheckDigit: String?
     ) {
         self.format = format
         self.documentType = documentType
@@ -106,12 +118,18 @@ public struct MRZResult: Hashable {
         self.surnames = surnames
         self.givenNames = givenNames
         self.documentNumber = documentNumber
+        self.documentNumberCheckDigit = documentNumberCheckDigit
         self.nationalityCountryCode = nationalityCountryCode
         self.birthdate = birthdate
+        self.birthdateCheckDigit = birthdateCheckDigit
         self.sex = sex
         self.expiryDate = expiryDate
+        self.expiryDateCheckDigit = expiryDateCheckDigit
         self.optionalData = optionalData
+        self.mrzString = mrzString
+        self.mrzStringWithFinalDigit = mrzStringWithFinalDigit
         self.optionalData2 = optionalData2
+        self.finalCheckDigit = finalCheckDigit
     }
 }
 

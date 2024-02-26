@@ -38,12 +38,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ERIKSSON",
             givenNames: "ANNA MARIA",
             documentNumber: "D23145890",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "UTO",
             birthdate:  dateFormatter.date(from: "740812")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "120415")!,
+            expiryDateCheckDigit: nil,
             optionalData: "",
-            optionalData2: ""
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: "",
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -62,12 +68,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ERIKSSON",
             givenNames: "ANNA MARIA",
             documentNumber: "D23145890",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "UTO",
             birthdate:  dateFormatter.date(from: "740812")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "120415")!,
+            expiryDateCheckDigit: nil,
             optionalData: "",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -86,12 +98,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ERIKSSON",
             givenNames: "ANNA MARIA",
             documentNumber: "L898902C3",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "UTO",
             birthdate:  dateFormatter.date(from: "740812")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "120415")!,
+            expiryDateCheckDigit: nil,
             optionalData: "ZE184226B",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -110,12 +128,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "IMIAREK",
             givenNames: "EVGENII",
             documentNumber: "110400000",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "RUS",
             birthdate:  dateFormatter.date(from: "820912")!,
+            birthdateCheckDigit: nil,
             sex: .male,
             expiryDate: dateFormatter.date(from: "260115")!,
+            expiryDateCheckDigit: nil,
             optionalData: "",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -134,12 +158,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ZDRIL7K",
             givenNames: "SERGEQ ANATOL9EVI3",
             documentNumber: "391935349",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "RUS",
             birthdate:  dateFormatter.date(from: "720723")!,
+            birthdateCheckDigit: nil,
             sex: .male,
             expiryDate: nil,
+            expiryDateCheckDigit: nil,
             optionalData: "4151218910003",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -158,12 +188,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "DE BRUIJN",
             givenNames: "WILLEKE LISELOTTE",
             documentNumber: "SPECI2014",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "NLD",
             birthdate:  dateFormatter.date(from: "650310")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "240309")!,
+            expiryDateCheckDigit: nil,
             optionalData: "999999990",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -182,12 +218,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ERIKSSON",
             givenNames: "ANNA MARIA",
             documentNumber: "L8988901C",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "XXX",
             birthdate:  dateFormatter.date(from: "19400907")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "19961210")!,
+            expiryDateCheckDigit: nil,
             optionalData: "6ZE184226B",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)
@@ -206,12 +248,18 @@ final class MRZParserTests: XCTestCase {
             surnames: "ERIKSSON",
             givenNames: "ANNA MARIA",
             documentNumber: "L8988901C",
+            documentNumberCheckDigit: nil,
             nationalityCountryCode: "XXX",
             birthdate:  dateFormatter.date(from: "19400907")!,
+            birthdateCheckDigit: nil,
             sex: .female,
             expiryDate: dateFormatter.date(from: "19961210")!,
+            expiryDateCheckDigit: nil,
             optionalData: "",
-            optionalData2: nil
+            mrzString: "",
+            mrzStringWithFinalDigit: "",
+            optionalData2: nil,
+            finalCheckDigit: nil
         )
 
         XCTAssertEqual(parser.parse(mrzString: mrzString), result)

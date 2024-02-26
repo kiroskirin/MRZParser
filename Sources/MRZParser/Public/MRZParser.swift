@@ -38,14 +38,20 @@ public struct MRZParser {
             surnames: mrzCode.namesField.surnames,
             givenNames: mrzCode.namesField.givenNames,
             documentNumber: mrzCode.documentNumberField.value,
+            documentNumberCheckDigit: mrzCode.documentNumberField.checkDigit,
             nationalityCountryCode: mrzCode.nationalityField.value,
             birthdate: mrzCode.birthdateField.value,
+            birthdateCheckDigit: mrzCode.birthdateField.checkDigit,
             sex: MRZResult.Sex.allCases.first(where: {
                 $0.identifier.contains(mrzCode.sexField.value)
             }) ?? .unspecified,
             expiryDate: mrzCode.expiryDateField.value,
+            expiryDateCheckDigit: mrzCode.expiryDateField.checkDigit,
             optionalData: mrzCode.optionalDataField.value,
-            optionalData2: mrzCode.optionalData2Field?.value
+            mrzString: mrzCode.mrzString,
+            mrzStringWithFinalDigit: mrzCode.mrzWithFinalDigit,
+            optionalData2: mrzCode.optionalData2Field?.value,
+            finalCheckDigit: mrzCode.finalCheckDigit
         )
     }
 
